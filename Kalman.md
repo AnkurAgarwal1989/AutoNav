@@ -1,0 +1,27 @@
+x = Estimated State Vector
+x' = Predicted State Vector
+F = State Transition Matrix
+H = Measurement Function
+u = External motion of system
+P = Uncertainty covariance
+P' = Predicted Uncertainty covariance
+Y = Innovation or Error
+R = Measurement Noise
+K = Kalman Gain
+Z = Measurement
+
+Measurement Update
+-Find the innovation
+-Find Kalman Gain
+-Correct the state estimate
+-Correct the P estimate (P')
+	Y = Z - Hx
+	x' = x + KY
+	P' = (I - KH)P
+
+
+Predict
+-Predict future state
+-Predict future co-variance
+
+
