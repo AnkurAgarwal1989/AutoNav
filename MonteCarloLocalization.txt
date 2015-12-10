@@ -1,0 +1,20 @@
+https://www.udacity.com/wiki/cs373/unit-1#!#exact-motion-exact-motion
+
+Localization Summary
+
+For a robot to navigate smartly, it needs to know where it is. The robot continuously updates its belief about its location over all possible locations. The robot constantly updates it's probability distribution over the sample space. This probability distribution should have two qualities:
+1.It should have one sharp peak. This indicates that the car has a very specific belief about its current location.
+2.The peak should be correct or the robot is lost.
+
+Monte Carlo localization divides the space discretely.
+1.BEGIN:
+	Start with a BELIEF (or PRIOR) set about our current location. This could be a uniform distribution.
+2.SENSE/ MEASURE: Multiply the PRIOR distribution by the results of our sense measurement. Normalize the resulting distribution. This generates a POSTERIOR.
+	Needs to be normalized to be a valid probability distribution. <insert total probability = 1 equation>
+	Sharpens the peak in distribution; Increases knowledge
+3.MOVE: Move by performing a convolution. The POSTERIOR now gives a new PRIOR.
+	Essentially calculate the probability of being in every grid of the map, from that motion.
+	Flattens the peak in distribution; Reduces knowledge
+4. Repeat the SENSE and MOVE cycle.
+This sounds more complicated than it really is: this step really involved multiplication and addition to obtain the new probabilities at each location.
+

@@ -25,3 +25,4 @@ Predict
 -Predict future co-variance
 
 
+https://www.udacity.com/wiki/cs373/kalman-filter-matrices#!#update-p
