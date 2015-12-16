@@ -14,7 +14,8 @@ Monte Carlo localization divides the space discretely.
 	Sharpens the peak in distribution; Increases knowledge
 3.MOVE: Move by performing a convolution. The POSTERIOR now gives a new PRIOR.
 	Essentially calculate the probability of being in every grid of the map, from that motion.
+	This sounds more complicated than it really is: this step involves multiplication and addition to obtain the new probabilities at each location.
 	Flattens the peak in distribution; Reduces knowledge
 4. Repeat the SENSE and MOVE cycle.
-This sounds more complicated than it really is: this step really involved multiplication and addition to obtain the new probabilities at each location.
+
 
