@@ -129,6 +129,7 @@ for t in range(T):
     for i in range(N):
         w.append(p[i].measurement_prob(Z))
 
+    #resample particles
     p3 = []
     index = int(random.random() * N)
     beta = 0.0
