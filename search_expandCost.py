@@ -68,7 +68,10 @@ def getNextOpenSpaces(grid, current, cost):
     #print nextOpen
     return nextOpen
     
-
+def prettyPrint(x):
+    for i in x:
+        print i
+        
 def search(grid,initial,goal,cost):
     #print "exp: ", exp
     #print initial
@@ -134,4 +137,4 @@ def search(grid,initial,goal,cost):
 
 
 print search(grid, init, goal, cost)
-print expand
+prettyPrint(expand)
